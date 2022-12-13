@@ -1,0 +1,44 @@
+@mixin font($font-size, $line-height, $color, $margin: 0) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  margin: $margin;
+}
+
+@mixin button($name, $padding) {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: $padding;
+  transition: 0.3s;
+
+  @if $name == "white-outline" {
+    background-color: transparent;
+    border: 1px solid $white;
+
+    &:hover {
+      background-color: $primary;
+      border: none;
+    }
+  } @else if $name == "primary-outline" {
+    background-color: $white;
+    border: 1px solid $primary;
+
+    &:hover {
+      background-color: $primary;
+      border: none;
+      color: $white;
+    }
+  } @else if $name == "primary" {
+    background-color: $primary;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $primary;
+      color: $primary;
+    }
+  }
+}

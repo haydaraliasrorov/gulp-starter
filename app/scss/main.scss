@@ -1,0 +1,150 @@
+@import "_config/var";
+@import "_config/fonts";
+@import "_mixins/mixins";
+@import "_mixins/media";
+@import "libs/*.scss";
+
+.temp {
+  background-color: lightblue;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+// For All Elements
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ScrollBar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $primary;
+}
+
+// header
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  padding: 20px 0;
+
+  &__container {
+    @include make-container();
+    @include max-container();
+    padding: 0;
+  }
+
+  &__row {
+    @include make-row();
+    margin: 0;
+  }
+
+  &__logo {
+    @include make-col-ready();
+    @include make-col(6);
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-up(xl) {
+      @include make-col(2);
+    }
+
+    img {
+      width: 130px;
+    }
+  }
+
+  &__navigation {
+    @include make-col-ready();
+    @include make-col(5);
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    // @include media-breakpoint-up(xl) {
+    //   @include make-col(6);
+    // }
+    @include media(xl) {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      gap: 40px;
+
+      li {
+        list-style: none;
+
+        a {
+          @include ubuntuBold();
+          @include font(16px, 25.6px, $gray800);
+          text-decoration: none;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  &__addressBox {
+    @include make-col-ready();
+    @include make-col(6);
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 36px;
+
+    @include media-breakpoint-up(xl) {
+      @include make-col(5);
+    }
+  }
+
+  &__address {
+    display: flex;
+    align-items: center;
+
+    &Img {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      picture {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        width: 40px;
+        margin-right: 12px;
+      }
+    }
+
+    &Text {
+      p {
+        @include ubuntuBold();
+        @include font(14px, 21px, $gray800);
+      }
+
+      a {
+        @include ubuntuRegular();
+        @include font(18px, 27px, $gray900);
+        text-decoration: none;
+
+        &:hover {
+          color: $warning;
+        }
+      }
+    }
+  }
+}

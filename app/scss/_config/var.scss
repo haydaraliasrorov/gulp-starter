@@ -1,0 +1,42 @@
+// Color
+$white: #ffffff;
+$primary: #ff5a30;
+$success: #03cea4;
+$danger: #ff4242;
+$warning: #f89828;
+$info: #5a87fc;
+$gray900: #1e212c;
+$gray800: #424551;
+$gray700: #787a80;
+$gray600: #9a9ca5;
+$gray500: #b3b7bc;
+$gray400: #d7dadd;
+$gray300: #e5e8ed;
+$gray200: #f4f5f7;
+$gray100: #f9f9f9;
+
+// Fontawesome
+$fa-font-path: "../font" !default;
+
+// Grid columns
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+
+// Grid breakpoins
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1201px,
+  xxl: 1400px,
+) !default;
+
+// Container max widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1230px,
+) !default;

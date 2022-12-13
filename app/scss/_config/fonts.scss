@@ -1,0 +1,12 @@
+@import "_mixins/font-face";
+
+@include font-face("ubuntuRegular", "../font/Ubuntu-Regular", 400);
+@include font-face("ubuntuBold", "../font/Ubuntu-Bold", 700);
+
+@mixin ubuntuRegular {
+  font-family: "ubuntuRegular", sans-serif;
+}
+
+@mixin ubuntuBold {
+  font-family: "ubuntuBold", sans-serif;
+}
